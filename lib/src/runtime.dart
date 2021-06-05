@@ -104,6 +104,7 @@ class _WasiStreamIterable extends Iterable<List<int>> {
 String _getLibName() {
   if (Platform.isMacOS) return appleLib;
   if (Platform.isLinux) return linuxLib;
+  if (Platform.isWindows) return windowLib;
   // TODO(dartbug.com/37882): Support more platforms.
   throw WasmError('Wasm not currently supported on this platform');
 }

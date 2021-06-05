@@ -95,7 +95,7 @@ Uri _getOutDir(Uri root) {
 }
 
 String _getOutLib(String target) {
-  final os = RegExp(r'^.*-.*-(.*)').firstMatch(target)?.group(1) ?? '';
+  final os = RegExp(r'^.*-.*-(.*)-.*').firstMatch(target)?.group(1) ?? '';
   if (os == 'darwin' || os == 'ios') {
     return appleLib;
   } else if (os == 'windows') {
