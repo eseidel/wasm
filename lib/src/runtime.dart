@@ -111,7 +111,7 @@ String _getLibName() {
 String? _getLibPathFrom(Uri root) {
   final pkgRoot = packageRootUri(root);
 
-  return pkgRoot?.resolve('$wasmToolDir${_getLibName()}').path;
+  return pkgRoot?.resolve('$wasmToolDir${_getLibName()}').toFilePath();
 }
 
 String _getLibPath() {
